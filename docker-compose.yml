@@ -14,3 +14,12 @@ services:
       - "5173:80"
     depends_on:
       - backend
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+
+    depends_on:
+      - frontend
+      - backend
